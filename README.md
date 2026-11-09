@@ -2,7 +2,7 @@
 
 **macOS Sequoia 15 · Ryzen 9 7940HX · RTX 4060 Laptop（独显直连） · 内置 Wi-Fi 与喇叭可用**
 
-> **English summary:** OpenCore EFI for the ASUS ROG Strix G17 **G713PV** (2023, Ryzen 9 7940HX, RTX 4060 Laptop in MUX/dGPU mode, MediaTek MT7922 Wi-Fi, Cirrus CS35L41 speaker amps). Runs macOS Sequoia 15 with NVIDIA acceleration via NullMoth, native Wi-Fi via AirportMtkWlan, working internal speakers via CirrusAudioFixup (G713 support upstreamed in [hoaug-tran/CirrusAudioFixup#22](https://github.com/hoaug-tran/CirrusAudioFixup/pull/22)), an 80% battery charge limit, AMD CPU power management and ASUS Fn keys. **You must generate your own SMBIOS** (serial/MLB/ROM/UUID are placeholders). Keyboard backlight control does not work. Use at your own risk.
+> **English summary:** OpenCore EFI for the ASUS ROG Strix G17 **G713PV** (2023, Ryzen 9 7940HX, RTX 4060 Laptop in MUX/dGPU mode, MediaTek MT7922 Wi-Fi, Cirrus CS35L41 speaker amps). Runs macOS Sequoia 15 with NVIDIA acceleration via NullMoth, native Wi-Fi via AirportMtkWlan, working internal speakers via CirrusAudioFixup (G713 support upstreamed in [hoaug-tran/CirrusAudioFixup#22](https://github.com/hoaug-tran/CirrusAudioFixup/pull/22)), an 80% battery charge limit, Bluetooth, AMD CPU power management and ASUS Fn keys. **You must generate your own SMBIOS** (serial/MLB/ROM/UUID are placeholders). Keyboard backlight control does not work. Use at your own risk.
 
 ---
 
@@ -31,7 +31,7 @@
 | 硬盘 | WD SN560 1 TB NVMe | ✅ |
 | 有线网卡 | Realtek RTL8111/8168 | ✅ |
 | 无线网卡 | MediaTek MT7922（AMD RZ616，14C3:0616） | ✅ AirportMtkWlan |
-| 蓝牙 | MediaTek MT7922 | ⚠️ 已加载固件，未详细测试 |
+| 蓝牙 | MediaTek MT7922 | ✅ 正常 |
 | 声卡 | Realtek ALC294（layout-id 13） | ✅ |
 | 功放 | 2 × Cirrus Logic CS35L41（I2C，子系统 1043:1D1F） | ✅ CirrusAudioFixup |
 | 触控板 | I2C HID | ✅ VoodooI2C |
