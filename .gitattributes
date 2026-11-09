@@ -1,0 +1,2 @@
+# Keep EFI/kext files byte-exact: no line-ending conversion
+* -text
