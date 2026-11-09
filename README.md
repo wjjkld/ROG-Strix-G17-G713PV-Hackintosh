@@ -2,7 +2,7 @@
 
 **macOS Sequoia 15 · Ryzen 9 7940HX · RTX 4060 Laptop（独显直连） · 内置 Wi-Fi 与喇叭可用**
 
-> **English summary:** OpenCore EFI for the ASUS ROG Strix G17 **G713PV** (2023, Ryzen 9 7940HX, RTX 4060 Laptop in MUX/dGPU mode, MediaTek MT7922 Wi-Fi, Cirrus CS35L41 speaker amps). Runs macOS Sequoia 15 with NVIDIA acceleration via NullMoth, native Wi-Fi via AirportMtkWlan, working internal speakers via CirrusAudioFixup (G713 support upstreamed in [hoaug-tran/CirrusAudioFixup#22](https://github.com/hoaug-tran/CirrusAudioFixup/pull/22)), an 80% battery charge limit, Bluetooth, AMD CPU power management and ASUS Fn keys. **You must generate your own SMBIOS** (serial/MLB/ROM/UUID are placeholders). Keyboard backlight control does not work. Use at your own risk.
+> **English summary:** OpenCore EFI for the ASUS ROG Strix G17 **G713PV** (2023, Ryzen 9 7940HX, RTX 4060 Laptop in MUX/dGPU mode, MediaTek MT7922 Wi-Fi, Cirrus CS35L41 speaker amps). Runs macOS Sequoia 15 with NVIDIA acceleration via NullMoth, native Wi-Fi via AirportMtkWlan, working internal speakers via CirrusAudioFixup (G713 support upstreamed in [hoaug-tran/CirrusAudioFixup#22](https://github.com/hoaug-tran/CirrusAudioFixup/pull/22)), an 80% battery charge limit, Bluetooth, HDMI, camera, AMD CPU power management and ASUS Fn keys. **You must generate your own SMBIOS** (serial/MLB/ROM/UUID are placeholders). Keyboard backlight control does not work. Use at your own risk.
 
 ---
 
@@ -47,6 +47,7 @@
 | 内置喇叭 | ✅ | CirrusAudioFixup 1.2.1，G713 支持已合入上游 |
 | 麦克风 | ✅ | |
 | Wi-Fi | ✅ | AirportMtkWlan 2.0.0（Sequoia 版），系统原生 Wi-Fi 菜单 |
+| 蓝牙 | ✅ | BlueToolFixup + SimpleMtkBtFw |
 | 有线网络 | ✅ | |
 | 触控板 | ✅ | |
 | 80% 充电上限 | ✅ | 自写 SSDT-CHGLIMIT + AsusSMC，`pmset -g batt` 显示 "not charging" 即生效 |
@@ -55,7 +56,8 @@
 | 键盘背光调节 | ❌ | ROG 背光由 USB 键盘本身控制，AsusSMC 无法操作；在 Windows 里设好亮度会保持 |
 | 麦克风静音、风扇模式、飞行模式键 | ❌ | AsusSMC 不处理这几个按键 |
 | 睡眠 / 唤醒 | ❓ | 未充分测试 |
-| HDMI / 摄像头 / 读卡器 | ❓ | 未测试 |
+| HDMI 外接显示器 | ✅ | |
+| 摄像头 | ✅ | |
 | AirDrop / 接力 | ❌ | MediaTek 网卡暂不支持 |
 | 核显（Radeon 610M） | ❌ | 不支持，独显直连模式下用不到 |
 
